@@ -42,6 +42,8 @@ build-backend = "setuptools.build_meta"
 packages = ["src"]
 [tool.setuptools.package-dir]
 "src" = "src"
+packages = ["agentecodificaolanggraph"]
+package-dir = {"" = "src"}
 
 [tool.ruff]
 select = ["E", "F", "B"]
