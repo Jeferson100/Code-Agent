@@ -1,0 +1,5 @@
+
+google-ai-generativelanguage==0.6.18
+google-api-core>=2.25.1
+grpcio-status>=1.60.0,<1.74.0
+protobuf>=4.21.0,<5.0.0
