@@ -2,7 +2,7 @@
 
 |||
 |-----------|-----------|
-| **Testing**  | [![Unit Test](https://github.com/Jeferson100/Agente-investimento/actions/workflows/teste.yml/badge.svg)](https://github.com/Jeferson100/Agente-investimento/actions/workflows/teste.yml)|
+| **Testing**  | [![Unit Test](https://github.com/Jeferson100/Code-Agent/actions/workflows/teste.yml/badge.svg)](https://github.com/Jeferson100/Code-Agent/actions/workflows/teste.yml)|
 | **Package**  | ![Python](https://img.shields.io/badge/Python-3.10%2B-blue?style=flat&logo=python) ![LangChain](https://img.shields.io/badge/LangChain-ffffff?logo=langchain&logoColor=green) ![Groq](https://img.shields.io/badge/Groq-API-green?style=flat) ![yFinance](https://img.shields.io/badge/yFinance-Stock%20-green) ![Finta](https://img.shields.io/badge/Finta-blueviolet) ![Serper API](https://img.shields.io/badge/Serper%20API-yellow) ![Pandas](https://img.shields.io/badge/Pandas%20-blue?style=flat&logo=pandas) ![Streamlit](https://img.shields.io/badge/Streamlit-green?style=flat&logo=streamlit) |
 | **App Streamlit** | <p align=""><a href="https://jeferson100-code-agent-appapp-code-streamlit-m6r4fj.streamlit.app/" target="_blank"><img src="https://static.streamlit.io/badges/streamlit_badge_black_white.svg" alt="Streamlit App"/></a></p> ||
 | | |
