@@ -172,3 +172,5 @@ cython_debug/
 # IDE / Editor specific
 .vscode/
 .idea/
+
+chainlit.md
