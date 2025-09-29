@@ -10,8 +10,6 @@ PYTHON_INTERPRETER = python
 # COMMANDS                                                                      #
 #################################################################################
 
-
-
 uv_install:
 	uv pip install --upgrade pip && \
 		uv pip install -r pyproject.toml

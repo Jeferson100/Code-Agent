@@ -88,11 +88,12 @@ cd Code-Agent
 
 ### 2. Instale as Dependências
 ```bash
-# Usando uv (recomendado)
-uv sync
+#Criando ambiente virtual
+uv venv venv
+source venv/bin/activate
 
 # Ou usando pip
-pip install -r pyproject.toml
+uv pip install -r pyproject.toml
 ```
 
 ### 3. Configure as Variáveis de Ambiente
@@ -131,7 +132,7 @@ Tambem pode ser executado localmente, utilizando o seguinte comando:
 
 
 ```bash
-pip install -r pyproject.toml
+uv pip install -r pyproject.toml
 streamlit run app/app_code_streamlit.py
 ```
 Acesse `http://localhost:8501` no seu navegador.
@@ -139,7 +140,7 @@ Acesse `http://localhost:8501` no seu navegador.
 ### Interface Chainlit (Chat)
 
 ```bash
-pip install -r pyproject.toml
+uv pip install -r pyproject.toml
 chainlit run app/app_chainlit.py
 ```
 Acesse `http://localhost:8000` no seu navegador.

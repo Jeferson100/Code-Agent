@@ -26,6 +26,9 @@ jobs:
       - name: Instalar o biblioteca
         run: |
           make uv_install
+      - name: Instalar bibliotecas devs
+        run: |
+          uv sync --extra dev
       - name: Verificar formatação dos arquivos
         run: |
           make format
