@@ -24,12 +24,12 @@ async def node_search(state: StateCode) -> Dict[str, str]:
 
     llm_init = init_chat_model("moonshotai/kimi-k2-instruct", model_provider="groq")
 
-    agente_search = create_react_agent(
+    agente_search = create_react_agent(  # type: ignore
         llm_init,
         [search_tool, think_tool],
         prompt=prompt_agent_pesquisador_format,
     )
 
-    response = await agente_search.ainvoke({"messages": [messages]})
+    response = await agente_search.ainvoke({"messages": [messages]})  # type: ignore
 
-    return {"feedback": response["messages"][-1].content}
+    return {"feedback": response["messages"][-1].content}  # type: ignore

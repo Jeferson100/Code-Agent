@@ -10,6 +10,5 @@ def test_build_returns_workflow():
 def test_compile_graph_returns_compiled_graph():
     builder = GraphBuilder()
     graph = builder.compile_graph()
-    # Compiled graph exposes invoke or ainvoke
     assert hasattr(graph, "invoke") or hasattr(graph, "ainvoke")
 

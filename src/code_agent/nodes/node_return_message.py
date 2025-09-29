@@ -24,12 +24,12 @@ async def return_messages(state: StateCode) -> Dict[str, List[Any]]:
 
     llm_init = init_chat_model("moonshotai/kimi-k2-instruct", model_provider="groq")
 
-    agent_response = create_react_agent(
+    agent_response = create_react_agent(  # type: ignore
         llm_init, [think_response], prompt=return_messagem_prompt_format
     )
 
     # response = await router_structured.llm_router()
-    response = await agent_response.ainvoke({"messages": messages})
+    response = await agent_response.ainvoke({"messages": messages})  # type: ignore
 
     if isinstance(response, dict):
         return {"messages": [response["messages"][-1]]}

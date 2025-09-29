@@ -1,8 +1,10 @@
 from typing import Any, Dict
 
+from langchain_core.tools import tool
 from langchain_tavily import TavilySearch
 
 
+@tool
 def search_tool(query: str) -> Dict[str, Any]:
     """
     Tool for searching the internet for information.
@@ -29,6 +31,7 @@ def search_tool(query: str) -> Dict[str, Any]:
     return tool_tavily.invoke(query)  # type:ignore
 
 
+@tool
 def think_tool(reflection: str) -> str:
     """Tool for strategic reflection on research progress and decision-making.
 
@@ -56,6 +59,7 @@ def think_tool(reflection: str) -> str:
     return f"Reflection recorded: {reflection}"
 
 
+@tool
 def think_response(reflection: str) -> str:
     """Tool for strategic thinking and analysis before delivering final coding response.
 

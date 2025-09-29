@@ -15,39 +15,39 @@ load_dotenv()
 
 class GraphBuilder:
     def __init__(self):
-        self.workflow = StateGraph(StateCode)
+        self.workflow: StateGraph = StateGraph(StateCode)
 
-    def build(self):
-        self.workflow.add_node("code", node_code)
+    def build(self) -> StateGraph:  # type: ignore
+        self.workflow.add_node("code", node_code)  # type:ignore
 
-        self.workflow.add_node("supervisor", node_supervisor)
+        self.workflow.add_node("supervisor", node_supervisor)  # type:ignore
 
-        self.workflow.add_node("check", python_repl)
+        self.workflow.add_node("check", python_repl)  # type:ignore
 
-        self.workflow.add_node("search", node_search)
+        self.workflow.add_node("search", node_search)  # type:ignore
 
-        self.workflow.add_node("return_messages", return_messages)
+        self.workflow.add_node("return_messages", return_messages)  # type:ignore
 
-        self.workflow.set_entry_point("code")
+        self.workflow.set_entry_point("code")  # type:ignore
 
-        self.workflow.add_edge("code", "check")
+        self.workflow.add_edge("code", "check")  # type:ignore
 
-        self.workflow.add_edge("check", "supervisor")
+        self.workflow.add_edge("check", "supervisor")  # type:ignore
 
-        self.workflow.add_edge("search", "code")
+        self.workflow.add_edge("search", "code")  # type:ignore
 
-        self.workflow.add_edge("return_messages", END)
+        self.workflow.add_edge("return_messages", END)  # type:ignore
 
-        self.workflow.add_conditional_edges(
+        self.workflow.add_conditional_edges(  # type:ignore
             "supervisor",
             should_continue,
             {"code": "code", "search": "search", "return_messages": "return_messages"},
         )
 
-        return self.workflow
+        return self.workflow  # type: ignore
 
-    def compile_graph(self):
-        graph = self.build()
-        memory = MemorySaver()
-        graph_compiled = graph.compile(checkpointer=memory)
-        return graph_compiled
+    def compile_graph(self):  # type: ignore
+        graph = self.build()  # type: ignore
+        memory = MemorySaver()  # type: ignore
+        graph_compiled = graph.compile(checkpointer=memory)  # type: ignore
+        return graph_compiled  # type: ignore
