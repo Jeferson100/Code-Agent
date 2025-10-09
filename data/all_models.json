@@ -1,0 +1,1384 @@
+{
+    "nvidia_structured": [
+        {
+            "model": "meta/llama-3.2-3b-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "nvidia/llama-3.1-nemoguard-8b-content-safety",
+            "provider": "nvidia"
+        },
+        {
+            "model": "moonshotai/kimi-k2-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "nvidia/nemotron-4-mini-hindi-4b-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "meta/llama-3.1-405b-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "mistralai/codestral-22b-instruct-v0.1",
+            "provider": "nvidia"
+        },
+        {
+            "model": "meta/llama-3.1-70b-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "writer/palmyra-fin-70b-32k",
+            "provider": "nvidia"
+        },
+        {
+            "model": "institute-of-science-tokyo/llama-3.1-swallow-8b-instruct-v0.1",
+            "provider": "nvidia"
+        },
+        {
+            "model": "openai/gpt-oss-20b",
+            "provider": "nvidia"
+        },
+        {
+            "model": "nvidia/llama-3.1-nemotron-70b-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "nvidia/llama-3.3-nemotron-super-49b-v1.5",
+            "provider": "nvidia"
+        },
+        {
+            "model": "institute-of-science-tokyo/llama-3.1-swallow-70b-instruct-v0.1",
+            "provider": "nvidia"
+        },
+        {
+            "model": "openai/gpt-oss-120b",
+            "provider": "nvidia"
+        },
+        {
+            "model": "nvidia/mistral-nemo-minitron-8b-8k-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "meta/llama-3.3-70b-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "nv-mistralai/mistral-nemo-12b-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "mistralai/mistral-large-2-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "meta/llama-3.2-1b-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "nvidia/llama-3.3-nemotron-super-49b-v1",
+            "provider": "nvidia"
+        },
+        {
+            "model": "meta/llama-3.1-8b-instruct",
+            "provider": "nvidia"
+        }
+    ],
+    "nvidia_tools": [
+        {
+            "model": "meta/llama-3.2-3b-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "qwen/qwen3-235b-a22b",
+            "provider": "nvidia"
+        },
+        {
+            "model": "ibm/granite-3.3-8b-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "moonshotai/kimi-k2-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "meta/llama-3.1-405b-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "nvidia/llama-3.1-nemotron-ultra-253b-v1",
+            "provider": "nvidia"
+        },
+        {
+            "model": "nvidia/llama-3.1-nemotron-nano-4b-v1.1",
+            "provider": "nvidia"
+        },
+        {
+            "model": "meta/llama-3.1-70b-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "mistralai/mistral-nemotron",
+            "provider": "nvidia"
+        },
+        {
+            "model": "openai/gpt-oss-20b",
+            "provider": "nvidia"
+        },
+        {
+            "model": "microsoft/phi-4-mini-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "nvidia/llama-3.3-nemotron-super-49b-v1.5",
+            "provider": "nvidia"
+        },
+        {
+            "model": "deepseek-ai/deepseek-r1-0528",
+            "provider": "nvidia"
+        },
+        {
+            "model": "openai/gpt-oss-120b",
+            "provider": "nvidia"
+        },
+        {
+            "model": "qwen/qwq-32b",
+            "provider": "nvidia"
+        },
+        {
+            "model": "meta/llama-3.3-70b-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "mistralai/mistral-small-3.1-24b-instruct-2503",
+            "provider": "nvidia"
+        },
+        {
+            "model": "nv-mistralai/mistral-nemo-12b-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "mistralai/mistral-large-2-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "nvidia/llama-3.3-nemotron-super-49b-v1",
+            "provider": "nvidia"
+        },
+        {
+            "model": "meta/llama-3.1-8b-instruct",
+            "provider": "nvidia"
+        }
+    ],
+    "nvidia_coder": [
+        {
+            "model": "mistralai/mamba-codestral-7b-v0.1",
+            "provider": "nvidia"
+        },
+        {
+            "model": "google/codegemma-1.1-7b",
+            "provider": "nvidia"
+        },
+        {
+            "model": "mistralai/codestral-22b-instruct-v0.1",
+            "provider": "nvidia"
+        },
+        {
+            "model": "meta/codellama-70b",
+            "provider": "nvidia"
+        },
+        {
+            "model": "nvidia/usdcode-llama-3.1-70b-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "ibm/granite-34b-code-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "qwen/qwen2.5-coder-7b-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "nvidia/usdcode-llama3-70b-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "deepseek-ai/deepseek-coder-6.7b-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "qwen/qwen2.5-coder-32b-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "google/codegemma-7b",
+            "provider": "nvidia"
+        },
+        {
+            "model": "ibm/granite-8b-code-instruct",
+            "provider": "nvidia"
+        }
+    ],
+    "nvidia_chat": [
+        {
+            "model": "google/gemma-3-4b-it",
+            "provider": "nvidia"
+        },
+        {
+            "model": "meta/llama-3.2-3b-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "igenius/italia_10b_instruct_16k",
+            "provider": "nvidia"
+        },
+        {
+            "model": "google/gemma-3-27b-it",
+            "provider": "nvidia"
+        },
+        {
+            "model": "nvidia/nemotron-4-340b-reward",
+            "provider": "nvidia"
+        },
+        {
+            "model": "nvidia/llama-3.1-nemoguard-8b-content-safety",
+            "provider": "nvidia"
+        },
+        {
+            "model": "microsoft/phi-3-medium-4k-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "mistralai/mistral-small-24b-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "mistralai/mixtral-8x7b-instruct-v0.1",
+            "provider": "nvidia"
+        },
+        {
+            "model": "qwen/qwen3-235b-a22b",
+            "provider": "nvidia"
+        },
+        {
+            "model": "ibm/granite-3.3-8b-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "moonshotai/kimi-k2-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "deepseek-ai/deepseek-r1",
+            "provider": "nvidia"
+        },
+        {
+            "model": "deepseek-ai/deepseek-r1-distill-qwen-7b",
+            "provider": "nvidia"
+        },
+        {
+            "model": "nvidia/nemotron-4-mini-hindi-4b-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "google/gemma-3-1b-it",
+            "provider": "nvidia"
+        },
+        {
+            "model": "meta/llama-3.1-405b-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "marin/marin-8b-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "yentinglin/llama-3-taiwan-70b-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "writer/palmyra-creative-122b",
+            "provider": "nvidia"
+        },
+        {
+            "model": "utter-project/eurollm-9b-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "ai21labs/jamba-1.5-mini-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "nvidia/nemotron-mini-4b-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "google/recurrentgemma-2b",
+            "provider": "nvidia"
+        },
+        {
+            "model": "seallms/seallm-7b-v2.5",
+            "provider": "nvidia"
+        },
+        {
+            "model": "nvidia/llama-3.1-nemotron-ultra-253b-v1",
+            "provider": "nvidia"
+        },
+        {
+            "model": "tokyotech-llm/llama-3-swallow-70b-instruct-v0.1",
+            "provider": "nvidia"
+        },
+        {
+            "model": "meta/llama3-70b-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "nvidia/llama-3.1-nemotron-nano-4b-v1.1",
+            "provider": "nvidia"
+        },
+        {
+            "model": "microsoft/phi-4-mini-flash-reasoning",
+            "provider": "nvidia"
+        },
+        {
+            "model": "ai21labs/jamba-1.5-large-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "google/gemma-2-9b-it",
+            "provider": "nvidia"
+        },
+        {
+            "model": "meta/llama-3.1-70b-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "microsoft/phi-3-mini-128k-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "microsoft/phi-3.5-moe-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "microsoft/phi-3.5-mini-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "mistralai/magistral-small-2506",
+            "provider": "nvidia"
+        },
+        {
+            "model": "mistralai/mistral-nemotron",
+            "provider": "nvidia"
+        },
+        {
+            "model": "databricks/dbrx-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "mistralai/mistral-7b-instruct-v0.2",
+            "provider": "nvidia"
+        },
+        {
+            "model": "snowflake/arctic",
+            "provider": "nvidia"
+        },
+        {
+            "model": "mistralai/mixtral-8x22b-v0.1",
+            "provider": "nvidia"
+        },
+        {
+            "model": "writer/palmyra-fin-70b-32k",
+            "provider": "nvidia"
+        },
+        {
+            "model": "writer/palmyra-med-70b-32k",
+            "provider": "nvidia"
+        },
+        {
+            "model": "speakleash/bielik-11b-v2.3-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "institute-of-science-tokyo/llama-3.1-swallow-8b-instruct-v0.1",
+            "provider": "nvidia"
+        },
+        {
+            "model": "writer/palmyra-med-70b",
+            "provider": "nvidia"
+        },
+        {
+            "model": "openai/gpt-oss-20b",
+            "provider": "nvidia"
+        },
+        {
+            "model": "nvidia/llama-3.1-nemotron-70b-reward",
+            "provider": "nvidia"
+        },
+        {
+            "model": "microsoft/phi-3-small-8k-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "nvidia/llama-3.1-nemotron-nano-8b-v1",
+            "provider": "nvidia"
+        },
+        {
+            "model": "meta/llama2-70b",
+            "provider": "nvidia"
+        },
+        {
+            "model": "nvidia/llama-3.1-nemotron-70b-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "microsoft/phi-4-mini-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "meta/llama3-8b-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "nvidia/llama-3.3-nemotron-super-49b-v1.5",
+            "provider": "nvidia"
+        },
+        {
+            "model": "google/gemma-2b",
+            "provider": "nvidia"
+        },
+        {
+            "model": "mistralai/mixtral-8x22b-instruct-v0.1",
+            "provider": "nvidia"
+        },
+        {
+            "model": "rakuten/rakutenai-7b-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "microsoft/phi-3-small-128k-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "institute-of-science-tokyo/llama-3.1-swallow-70b-instruct-v0.1",
+            "provider": "nvidia"
+        },
+        {
+            "model": "deepseek-ai/deepseek-r1-0528",
+            "provider": "nvidia"
+        },
+        {
+            "model": "abacusai/dracarys-llama-3.1-70b-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "openai/gpt-oss-120b",
+            "provider": "nvidia"
+        },
+        {
+            "model": "nvidia/riva-translate-4b-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "qwen/qwen2-7b-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "mediatek/breeze-7b-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "mistralai/mistral-7b-instruct-v0.3",
+            "provider": "nvidia"
+        },
+        {
+            "model": "ibm/granite-guardian-3.0-8b",
+            "provider": "nvidia"
+        },
+        {
+            "model": "deepseek-ai/deepseek-r1-distill-llama-8b",
+            "provider": "nvidia"
+        },
+        {
+            "model": "qwen/qwen2.5-7b-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "zyphra/zamba2-7b-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "deepseek-ai/deepseek-r1-distill-qwen-32b",
+            "provider": "nvidia"
+        },
+        {
+            "model": "aisingapore/sea-lion-7b-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "nvidia/llama-3.1-nemoguard-8b-topic-control",
+            "provider": "nvidia"
+        },
+        {
+            "model": "01-ai/yi-large",
+            "provider": "nvidia"
+        },
+        {
+            "model": "tiiuae/falcon3-7b-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "qwen/qwq-32b",
+            "provider": "nvidia"
+        },
+        {
+            "model": "google/gemma-3-12b-it",
+            "provider": "nvidia"
+        },
+        {
+            "model": "deepseek-ai/deepseek-r1-distill-qwen-14b",
+            "provider": "nvidia"
+        },
+        {
+            "model": "nvidia/llama-3.1-nemotron-51b-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "google/gemma-2-2b-it",
+            "provider": "nvidia"
+        },
+        {
+            "model": "microsoft/phi-3-medium-128k-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "rakuten/rakutenai-7b-chat",
+            "provider": "nvidia"
+        },
+        {
+            "model": "mistralai/mistral-large",
+            "provider": "nvidia"
+        },
+        {
+            "model": "nvidia/nemoretriever-parse",
+            "provider": "nvidia"
+        },
+        {
+            "model": "nvidia/mistral-nemo-minitron-8b-8k-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "meta/llama-3.3-70b-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "gotocompany/gemma-2-9b-cpt-sahabatai-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "ibm/granite-3.0-8b-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "nv-mistralai/mistral-nemo-12b-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "upstage/solar-10.7b-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "google/gemma-7b",
+            "provider": "nvidia"
+        },
+        {
+            "model": "meta/llama-guard-4-12b",
+            "provider": "nvidia"
+        },
+        {
+            "model": "mistralai/mistral-large-2-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "ibm/granite-3.0-3b-a800m-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "mistralai/mathstral-7b-v0.1",
+            "provider": "nvidia"
+        },
+        {
+            "model": "microsoft/phi-3-mini-4k-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "meta/llama-3.2-1b-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "baichuan-inc/baichuan2-13b-chat",
+            "provider": "nvidia"
+        },
+        {
+            "model": "google/gemma-2-27b-it",
+            "provider": "nvidia"
+        },
+        {
+            "model": "igenius/colosseum_355b_instruct_16k",
+            "provider": "nvidia"
+        },
+        {
+            "model": "nvidia/llama-3.3-nemotron-super-49b-v1",
+            "provider": "nvidia"
+        },
+        {
+            "model": "thudm/chatglm3-6b",
+            "provider": "nvidia"
+        },
+        {
+            "model": "meta/llama-3.1-8b-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "google/shieldgemma-9b",
+            "provider": "nvidia"
+        },
+        {
+            "model": "nvidia/nemotron-4-340b-instruct",
+            "provider": "nvidia"
+        }
+    ],
+    "groq_structured": [
+        {
+            "model": "meta-llama/llama-4-maverick-17b-128e-instruct",
+            "provider": "groq"
+        },
+        {
+            "model": "openai/gpt-oss-20b",
+            "provider": "groq"
+        },
+        {
+            "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+            "provider": "groq"
+        },
+        {
+            "model": "openai/gpt-oss-120b",
+            "provider": "groq"
+        },
+        {
+            "model": "moonshotai/kimi-k2-instruct-0905",
+            "provider": "groq"
+        },
+        {
+            "model": "moonshotai/kimi-k2-instruct",
+            "provider": "groq"
+        }
+    ],
+    "cerebras_structured": [
+        {
+            "model": "qwen-3-235b-a22b-instruct-2507",
+            "provider": "cerebras"
+        },
+        {
+            "model": "qwen-3-32b",
+            "provider": "cerebras"
+        },
+        {
+            "model": "llama3.1-8b",
+            "provider": "cerebras"
+        },
+        {
+            "model": "gpt-oss-120b",
+            "provider": "cerebras"
+        },
+        {
+            "model": "llama-4-scout-17b-16e-instruct",
+            "provider": "cerebras"
+        },
+        {
+            "model": "llama-4-maverick-17b-128e-instruct",
+            "provider": "cerebras"
+        },
+        {
+            "model": "llama-3.3-70b",
+            "provider": "cerebras"
+        }
+    ],
+    "all_nvidia": [
+        {
+            "model": "google/gemma-3-4b-it",
+            "provider": "nvidia"
+        },
+        {
+            "model": "meta/llama-3.2-3b-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "igenius/italia_10b_instruct_16k",
+            "provider": "nvidia"
+        },
+        {
+            "model": "google/gemma-3-27b-it",
+            "provider": "nvidia"
+        },
+        {
+            "model": "google/gemma-3n-e2b-it",
+            "provider": "nvidia"
+        },
+        {
+            "model": "nvidia/nemotron-4-340b-reward",
+            "provider": "nvidia"
+        },
+        {
+            "model": "nvidia/llama-3.1-nemoguard-8b-content-safety",
+            "provider": "nvidia"
+        },
+        {
+            "model": "microsoft/phi-3-medium-4k-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "mistralai/mistral-small-24b-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "mistralai/mixtral-8x7b-instruct-v0.1",
+            "provider": "nvidia"
+        },
+        {
+            "model": "nvidia/neva-22b",
+            "provider": "nvidia"
+        },
+        {
+            "model": "qwen/qwen3-235b-a22b",
+            "provider": "nvidia"
+        },
+        {
+            "model": "ibm/granite-3.3-8b-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "moonshotai/kimi-k2-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "deepseek-ai/deepseek-r1",
+            "provider": "nvidia"
+        },
+        {
+            "model": "deepseek-ai/deepseek-r1-distill-qwen-7b",
+            "provider": "nvidia"
+        },
+        {
+            "model": "meta/llama-3.2-11b-vision-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "nvidia/nemotron-4-mini-hindi-4b-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "google/gemma-3-1b-it",
+            "provider": "nvidia"
+        },
+        {
+            "model": "meta/llama-3.1-405b-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "mistralai/mamba-codestral-7b-v0.1",
+            "provider": "nvidia"
+        },
+        {
+            "model": "marin/marin-8b-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "yentinglin/llama-3-taiwan-70b-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "writer/palmyra-creative-122b",
+            "provider": "nvidia"
+        },
+        {
+            "model": "utter-project/eurollm-9b-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "ai21labs/jamba-1.5-mini-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "nvidia/nemotron-mini-4b-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "nvidia/llama3-chatqa-1.5-70b",
+            "provider": "nvidia"
+        },
+        {
+            "model": "google/recurrentgemma-2b",
+            "provider": "nvidia"
+        },
+        {
+            "model": "seallms/seallm-7b-v2.5",
+            "provider": "nvidia"
+        },
+        {
+            "model": "google/deplot",
+            "provider": "nvidia"
+        },
+        {
+            "model": "nvidia/llama-3.1-nemotron-ultra-253b-v1",
+            "provider": "nvidia"
+        },
+        {
+            "model": "tokyotech-llm/llama-3-swallow-70b-instruct-v0.1",
+            "provider": "nvidia"
+        },
+        {
+            "model": "meta/llama3-70b-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "google/codegemma-1.1-7b",
+            "provider": "nvidia"
+        },
+        {
+            "model": "nvidia/llama-3.1-nemotron-nano-4b-v1.1",
+            "provider": "nvidia"
+        },
+        {
+            "model": "microsoft/phi-4-mini-flash-reasoning",
+            "provider": "nvidia"
+        },
+        {
+            "model": "ai21labs/jamba-1.5-large-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "mistralai/codestral-22b-instruct-v0.1",
+            "provider": "nvidia"
+        },
+        {
+            "model": "google/gemma-2-9b-it",
+            "provider": "nvidia"
+        },
+        {
+            "model": "meta/llama-3.1-70b-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "meta/codellama-70b",
+            "provider": "nvidia"
+        },
+        {
+            "model": "microsoft/phi-3-mini-128k-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "microsoft/phi-3.5-moe-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "microsoft/phi-3.5-mini-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "microsoft/kosmos-2",
+            "provider": "nvidia"
+        },
+        {
+            "model": "mistralai/magistral-small-2506",
+            "provider": "nvidia"
+        },
+        {
+            "model": "mistralai/mistral-nemotron",
+            "provider": "nvidia"
+        },
+        {
+            "model": "nvidia/usdcode-llama-3.1-70b-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "databricks/dbrx-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "mistralai/mistral-7b-instruct-v0.2",
+            "provider": "nvidia"
+        },
+        {
+            "model": "google/paligemma",
+            "provider": "nvidia"
+        },
+        {
+            "model": "snowflake/arctic",
+            "provider": "nvidia"
+        },
+        {
+            "model": "mistralai/mixtral-8x22b-v0.1",
+            "provider": "nvidia"
+        },
+        {
+            "model": "nvidia/llama-3.1-nemotron-nano-vl-8b-v1",
+            "provider": "nvidia"
+        },
+        {
+            "model": "writer/palmyra-fin-70b-32k",
+            "provider": "nvidia"
+        },
+        {
+            "model": "microsoft/phi-3.5-vision-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "writer/palmyra-med-70b-32k",
+            "provider": "nvidia"
+        },
+        {
+            "model": "ibm/granite-34b-code-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "nvidia/vila",
+            "provider": "nvidia"
+        },
+        {
+            "model": "speakleash/bielik-11b-v2.3-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "institute-of-science-tokyo/llama-3.1-swallow-8b-instruct-v0.1",
+            "provider": "nvidia"
+        },
+        {
+            "model": "meta/llama-3.2-90b-vision-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "meta/llama-4-maverick-17b-128e-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "nvidia/nvclip",
+            "provider": "nvidia"
+        },
+        {
+            "model": "writer/palmyra-med-70b",
+            "provider": "nvidia"
+        },
+        {
+            "model": "openai/gpt-oss-20b",
+            "provider": "nvidia"
+        },
+        {
+            "model": "qwen/qwen2.5-coder-7b-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "nvidia/llama-3.1-nemotron-70b-reward",
+            "provider": "nvidia"
+        },
+        {
+            "model": "microsoft/phi-3-small-8k-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "nvidia/llama-3.1-nemotron-nano-8b-v1",
+            "provider": "nvidia"
+        },
+        {
+            "model": "meta/llama2-70b",
+            "provider": "nvidia"
+        },
+        {
+            "model": "nvidia/llama-3.1-nemotron-70b-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "microsoft/phi-4-mini-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "meta/llama3-8b-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "nvidia/llama-3.3-nemotron-super-49b-v1.5",
+            "provider": "nvidia"
+        },
+        {
+            "model": "google/gemma-2b",
+            "provider": "nvidia"
+        },
+        {
+            "model": "mistralai/mixtral-8x22b-instruct-v0.1",
+            "provider": "nvidia"
+        },
+        {
+            "model": "nvidia/llama3-chatqa-1.5-8b",
+            "provider": "nvidia"
+        },
+        {
+            "model": "nvidia/usdcode-llama3-70b-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "rakuten/rakutenai-7b-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "microsoft/phi-3-small-128k-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "institute-of-science-tokyo/llama-3.1-swallow-70b-instruct-v0.1",
+            "provider": "nvidia"
+        },
+        {
+            "model": "deepseek-ai/deepseek-r1-0528",
+            "provider": "nvidia"
+        },
+        {
+            "model": "abacusai/dracarys-llama-3.1-70b-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "microsoft/phi-4-multimodal-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "openai/gpt-oss-120b",
+            "provider": "nvidia"
+        },
+        {
+            "model": "nvidia/riva-translate-4b-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "qwen/qwen2-7b-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "mediatek/breeze-7b-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "mistralai/mistral-7b-instruct-v0.3",
+            "provider": "nvidia"
+        },
+        {
+            "model": "ibm/granite-guardian-3.0-8b",
+            "provider": "nvidia"
+        },
+        {
+            "model": "deepseek-ai/deepseek-r1-distill-llama-8b",
+            "provider": "nvidia"
+        },
+        {
+            "model": "qwen/qwen2.5-7b-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "zyphra/zamba2-7b-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "adept/fuyu-8b",
+            "provider": "nvidia"
+        },
+        {
+            "model": "deepseek-ai/deepseek-r1-distill-qwen-32b",
+            "provider": "nvidia"
+        },
+        {
+            "model": "aisingapore/sea-lion-7b-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "nvdev/meta/llama-4-maverick-17b-128e-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "nvidia/llama-3.1-nemoguard-8b-topic-control",
+            "provider": "nvidia"
+        },
+        {
+            "model": "01-ai/yi-large",
+            "provider": "nvidia"
+        },
+        {
+            "model": "tiiuae/falcon3-7b-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "google/gemma-3n-e4b-it",
+            "provider": "nvidia"
+        },
+        {
+            "model": "qwen/qwq-32b",
+            "provider": "nvidia"
+        },
+        {
+            "model": "google/gemma-3-12b-it",
+            "provider": "nvidia"
+        },
+        {
+            "model": "deepseek-ai/deepseek-r1-distill-qwen-14b",
+            "provider": "nvidia"
+        },
+        {
+            "model": "microsoft/phi-3-vision-128k-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "deepseek-ai/deepseek-coder-6.7b-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "nvidia/llama-3.1-nemotron-51b-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "mistralai/mistral-medium-3-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "google/gemma-2-2b-it",
+            "provider": "nvidia"
+        },
+        {
+            "model": "microsoft/phi-3-medium-128k-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "rakuten/rakutenai-7b-chat",
+            "provider": "nvidia"
+        },
+        {
+            "model": "mistralai/mistral-large",
+            "provider": "nvidia"
+        },
+        {
+            "model": "nvidia/nemoretriever-parse",
+            "provider": "nvidia"
+        },
+        {
+            "model": "nvidia/mistral-nemo-minitron-8b-8k-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "qwen/qwen2.5-coder-32b-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "meta/llama-3.3-70b-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "mistralai/mistral-small-3.1-24b-instruct-2503",
+            "provider": "nvidia"
+        },
+        {
+            "model": "gotocompany/gemma-2-9b-cpt-sahabatai-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "ibm/granite-3.0-8b-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "nv-mistralai/mistral-nemo-12b-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "upstage/solar-10.7b-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "google/gemma-7b",
+            "provider": "nvidia"
+        },
+        {
+            "model": "meta/llama-guard-4-12b",
+            "provider": "nvidia"
+        },
+        {
+            "model": "mistralai/mistral-large-2-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "google/codegemma-7b",
+            "provider": "nvidia"
+        },
+        {
+            "model": "ibm/granite-3.0-3b-a800m-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "mistralai/mathstral-7b-v0.1",
+            "provider": "nvidia"
+        },
+        {
+            "model": "microsoft/phi-3-mini-4k-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "meta/llama-3.2-1b-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "baichuan-inc/baichuan2-13b-chat",
+            "provider": "nvidia"
+        },
+        {
+            "model": "google/gemma-2-27b-it",
+            "provider": "nvidia"
+        },
+        {
+            "model": "igenius/colosseum_355b_instruct_16k",
+            "provider": "nvidia"
+        },
+        {
+            "model": "nvidia/llama-3.3-nemotron-super-49b-v1",
+            "provider": "nvidia"
+        },
+        {
+            "model": "ibm/granite-8b-code-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "thudm/chatglm3-6b",
+            "provider": "nvidia"
+        },
+        {
+            "model": "meta/llama-3.1-8b-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "meta/llama-4-scout-17b-16e-instruct",
+            "provider": "nvidia"
+        },
+        {
+            "model": "google/shieldgemma-9b",
+            "provider": "nvidia"
+        },
+        {
+            "model": "nvidia/nemotron-4-340b-instruct",
+            "provider": "nvidia"
+        }
+    ],
+    "all_groq": [
+        {
+            "model": "llama-3.3-70b-versatile",
+            "provider": "groq"
+        },
+        {
+            "model": "moonshotai/kimi-k2-instruct-0905",
+            "provider": "groq"
+        },
+        {
+            "model": "allam-2-7b",
+            "provider": "groq"
+        },
+        {
+            "model": "llama-3.1-8b-instant",
+            "provider": "groq"
+        },
+        {
+            "model": "openai/gpt-oss-20b",
+            "provider": "groq"
+        },
+        {
+            "model": "meta-llama/llama-prompt-guard-2-86m",
+            "provider": "groq"
+        },
+        {
+            "model": "meta-llama/llama-prompt-guard-2-22m",
+            "provider": "groq"
+        },
+        {
+            "model": "meta-llama/llama-guard-4-12b",
+            "provider": "groq"
+        },
+        {
+            "model": "playai-tts",
+            "provider": "groq"
+        },
+        {
+            "model": "groq/compound-mini",
+            "provider": "groq"
+        },
+        {
+            "model": "playai-tts-arabic",
+            "provider": "groq"
+        },
+        {
+            "model": "groq/compound",
+            "provider": "groq"
+        },
+        {
+            "model": "openai/gpt-oss-120b",
+            "provider": "groq"
+        },
+        {
+            "model": "moonshotai/kimi-k2-instruct",
+            "provider": "groq"
+        },
+        {
+            "model": "whisper-large-v3-turbo",
+            "provider": "groq"
+        },
+        {
+            "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+            "provider": "groq"
+        },
+        {
+            "model": "whisper-large-v3",
+            "provider": "groq"
+        },
+        {
+            "model": "meta-llama/llama-4-maverick-17b-128e-instruct",
+            "provider": "groq"
+        },
+        {
+            "model": "qwen/qwen3-32b",
+            "provider": "groq"
+        }
+    ],
+    "all_cerebras": [
+        {
+            "model": "llama3.1-8b",
+            "provider": "cerebras"
+        },
+        {
+            "model": "llama-4-scout-17b-16e-instruct",
+            "provider": "cerebras"
+        },
+        {
+            "model": "llama-3.3-70b",
+            "provider": "cerebras"
+        },
+        {
+            "model": "gpt-oss-120b",
+            "provider": "cerebras"
+        },
+        {
+            "model": "qwen-3-235b-a22b-instruct-2507",
+            "provider": "cerebras"
+        },
+        {
+            "model": "qwen-3-32b",
+            "provider": "cerebras"
+        },
+        {
+            "model": "llama-4-maverick-17b-128e-instruct",
+            "provider": "cerebras"
+        }
+    ]
+}

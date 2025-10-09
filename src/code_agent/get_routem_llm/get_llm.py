@@ -94,9 +94,7 @@ class GetLlmResponse:
                 model, output_type=self.strutured_output
             )  # No change needed here after fixing the type hint
 
-            async with agent.run_stream(self.messages) as response:
-                async for profile in response.stream_output():
-                    return profile
+            return agent.run_sync(self.messages)  
 
         except ImportError as exc:
             raise ImportError(
