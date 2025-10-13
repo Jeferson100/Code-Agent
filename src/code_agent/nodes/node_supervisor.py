@@ -1,24 +1,18 @@
 from typing import Any, Dict
 
 from ..get_routem_llm.routem_llm import LlmRouter
-from ..prompts.prompts import supervisor_code
+from ..prompts.prompts import SUPERVISOR_CODE
 from ..states_outputs.output_structured import SupervisorResponse
 from ..states_outputs.states import StateCode
 
 
 async def node_supervisor(state: StateCode) -> Dict[str, Any]:
-    print("Entrei no supervisor")
-
-    print("state", state["messages"])
-
     messages = state.get("messages")
 
     if messages:
         messages = messages[-1]
 
     interactions = state.get("interactions", 0)
-
-    error_message = state.get("error_message", "")
 
     if interactions:
         interactions += 1
@@ -27,11 +21,11 @@ async def node_supervisor(state: StateCode) -> Dict[str, Any]:
 
     code = state["code"]
 
-    prompt_supervisor_format = supervisor_code.format(
-        messages=messages, code=code, error=error_message
-    )
+    prompt_supervisor_format = SUPERVISOR_CODE.format(messages=messages, code=code)
 
-    router_structured = LlmRouter(prompt_supervisor_format, SupervisorResponse)
+    router_structured = LlmRouter(
+        prompt_supervisor_format, SupervisorResponse(valid=False, feedback="")
+    )
 
     response = await router_structured.llm_router()
 

@@ -122,3 +122,58 @@ class _PythonREPL:
         return ""
 setattr(lc_exp, "PythonREPL", _PythonREPL)
 
+
+# tavily
+tavily = ensure_module("tavily")
+class _TavilyClient:
+    def search(self, query: str):
+        return {"results": [{"content": f"Mock search result for: {query}"}]}
+setattr(tavily, "TavilyClient", _TavilyClient)
+
+
+# cerebras
+cerebras = ensure_module("cerebras")
+cerebras_cloud = ensure_module("cerebras.cloud")
+cerebras_cloud_sdk = ensure_module("cerebras.cloud.sdk")
+
+class _AsyncCerebras:
+    def __init__(self, *args, **kwargs):
+        pass
+    
+    async def generate(self, *args, **kwargs):
+        return {"choices": [{"text": "mock response"}]}
+
+setattr(cerebras_cloud_sdk, "AsyncCerebras", _AsyncCerebras)
+
+
+# pydantic_ai
+pydantic_ai = ensure_module("pydantic_ai")
+pydantic_ai_models = ensure_module("pydantic_ai.models")
+pydantic_ai_models_huggingface = ensure_module("pydantic_ai.models.huggingface")
+
+class _HuggingFaceModel:
+    def __init__(self, *args, **kwargs):
+        pass
+
+class _Agent:
+    def __init__(self, *args, **kwargs):
+        pass
+    
+    def run_sync(self, *args, **kwargs):
+        return {"mock": "response"}
+    
+    async def run_stream(self, *args, **kwargs):
+        class _Stream:
+            async def __aenter__(self):
+                return self
+            
+            async def __aexit__(self, *args):
+                pass
+            
+            async def stream_output(self):
+                yield {"mock": "stream_response"}
+        
+        return _Stream()
+
+setattr(pydantic_ai_models_huggingface, "HuggingFaceModel", _HuggingFaceModel)
+setattr(pydantic_ai, "Agent", _Agent)

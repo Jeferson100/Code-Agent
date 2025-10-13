@@ -9,14 +9,14 @@ def test_should_continue_when_valid_true_returns_return_messages():
     assert should_continue(state) == "return_messages"
 
 
-def test_should_continue_when_interactions_gte_5_returns_return_messages():
-    state = cast(StateCode, {"valid": False, "interactions": 5, "messages": []})
+def test_should_continue_when_interactions_gte_2_returns_return_messages():
+    state = cast(StateCode, {"valid": False, "interactions": 2, "messages": []})
     assert should_continue(state) == "return_messages"
 
 
-def test_should_continue_when_invalid_and_interactions_eq_3_returns_search():
+def test_should_continue_when_invalid_and_interactions_eq_3_returns_return_messages():
     state = cast(StateCode, {"valid": False, "interactions": 3, "messages": []})
-    assert should_continue(state) == "search"
+    assert should_continue(state) == "return_messages"
 
 
 def test_should_continue_default_returns_code():

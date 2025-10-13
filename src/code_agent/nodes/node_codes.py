@@ -3,7 +3,7 @@ from typing import Any, Dict, List
 from langchain.chat_models import init_chat_model
 
 from ..get_routem_llm.routem_llm import LlmRouter
-from ..prompts.prompts import prompt_code
+from ..prompts.prompts import PROMPT_CODE
 from ..states_outputs.output_structured import CodeOutput
 from ..states_outputs.states import StateCode
 
@@ -20,7 +20,7 @@ async def node_code(state: StateCode) -> Dict[str, str]:
 
     feedback = state.get("feedback", "")
 
-    prompt_code_format = prompt_code.format(messages=messages, feedback=feedback)
+    prompt_code_format = PROMPT_CODE.format(messages=messages, feedback=feedback)
 
     response = llm_code.invoke(prompt_code_format)
 

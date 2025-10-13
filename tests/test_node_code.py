@@ -2,7 +2,7 @@ import asyncio
 from types import SimpleNamespace
 from typing import Any
 
-from src.code_agent.nodes import node_codes as node_codes_module
+from code_agent.nodes import node_codes as node_codes_module
 
 
 class DummyCodeOutput:

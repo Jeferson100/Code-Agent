@@ -1,37 +1,37 @@
-from typing import Any, Dict
-
+from dotenv import load_dotenv
 from langchain_core.tools import tool
-from langchain_tavily import TavilySearch
+from tavily import TavilyClient
+
+load_dotenv()
+
+tavily_client = TavilyClient()
 
 
-@tool
-def search_tool(query: str) -> Dict[str, Any]:
-    """
-    Tool for searching the internet for information.
+@tool(parse_docstring=True)
+def web_search(
+    query: str,
+):
+    """Search the web for information on a specific topic.
+
+    This tool performs web searches and returns relevant results
+    for the given query. Use this when you need to gather information from
+    the internet about any topic.
 
     Args:
-        query (str): The search query.
+        query: The search query string. Be specific and clear about what
+               information you're looking for.
 
     Returns:
-        Dict[str, Any]: The search results.
+        Search results from search engine.
+
+    Example:
+        web_search("machine learning applications in healthcare")
     """
-
-    tool_tavily = TavilySearch(
-        max_results=5,
-        topic="general",
-        # include_answer=False,
-        # include_raw_content=False,
-        # include_images=False,
-        # include_image_descriptions=False,
-        # search_depth="basic",
-        # time_range="day",
-        # include_domains=None,
-        exclude_domains=["medium.com", "youtube.com", "wikipedia.org", "linkedin.com"],
-    )
-    return tool_tavily.invoke(query)  # type:ignore
+    print(f"🔍 Searching the web for: {query}")
+    return tavily_client.search(query)
 
 
-@tool
+@tool(parse_docstring=True)
 def think_tool(reflection: str) -> str:
     """Tool for strategic reflection on research progress and decision-making.
 

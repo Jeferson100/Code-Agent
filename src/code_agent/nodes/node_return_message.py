@@ -3,7 +3,7 @@ from typing import Any, Dict, List
 from langchain.chat_models import init_chat_model
 from langgraph.prebuilt import create_react_agent
 
-from ..prompts.prompts import return_messages_prompt
+from ..prompts.prompts import RETURN_MESSAGES_PROMPT
 from ..states_outputs.states import StateCode
 from ..tools.think_tavily import think_response
 
@@ -18,7 +18,7 @@ async def return_messages(state: StateCode) -> Dict[str, List[Any]]:
     if messages:
         messages = messages[-1]
 
-    return_messagem_prompt_format = return_messages_prompt.format(
+    return_messagem_prompt_format = RETURN_MESSAGES_PROMPT.format(
         messages=messages, code=code, feedback=feedback
     )
 

@@ -6,15 +6,6 @@ def should_continue(state: StateCode) -> str:
 
     valid = state.get("valid")
 
-    print(f"Debug - interactions: {interactions}, valid: {valid}")
-
-    if valid is True:
+    if valid is True or interactions >= 2:
         return "return_messages"
-
-    if interactions >= 5:
-        return "return_messages"
-
-    if valid is False and interactions == 3:
-        return "search"
-
     return "code"

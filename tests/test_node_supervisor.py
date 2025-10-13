@@ -1,7 +1,7 @@
 import asyncio
 from typing import Any
 
-from src.code_agent.nodes import node_supervisor as supervisor_module
+from code_agent.nodes import node_supervisor as supervisor_module
 
 
 def test_node_supervisor_returns_feedback_and_valid(monkeypatch: Any):

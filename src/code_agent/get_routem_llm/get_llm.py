@@ -90,11 +90,9 @@ class GetLlmResponse:
                 )
 
             model = HuggingFaceModel(self.model_llm)
-            agent = Agent(
-                model, output_type=self.strutured_output
-            )  # No change needed here after fixing the type hint
+            agent = Agent(model, output_type=self.strutured_output)
 
-            return agent.run_sync(self.messages)  
+            return agent.run_sync(self.messages)
 
         except ImportError as exc:
             raise ImportError(
