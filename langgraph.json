@@ -1,7 +1,8 @@
 {
     "dockerfile_lines": [],
     "graphs": {
-      "agente_code": "./app/graph_cli.py:graph"
+      "agente_code": "./app/graph_cli.py:graph",
+      "deep_agent_code": "./app/deep_agent_code_cli.py:agent"
     },
     "python_version": "3.11",
     "env": "./.env",

@@ -26,7 +26,7 @@ RUN uv pip install -r pyproject.toml
 COPY . .
 
 # Expose port
-EXPOSE 3000
+EXPOSE 4000
 
 # Start the application
-CMD ["python", "-m", "uvicorn", "app.app_fastapi:app", "--host", "0.0.0.0", "--port", "3000"]
+CMD ["python", "-m", "uvicorn", "app.app_fastapi:app", "--host", "0.0.0.0", "--port", "4000"]

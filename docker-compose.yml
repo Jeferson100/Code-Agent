@@ -6,7 +6,7 @@ services:
       dockerfile: Dockerfile
     container_name: "agent_code"
     ports:
-        - "3000:3000"
+        - "4000:4000"
     environment:
       - GROQ_API_KEY=${GROQ_API_KEY}
       - LANGSMITH_API_KEY=${LANGSMITH_API_KEY}
@@ -18,4 +18,5 @@ services:
       - NVIDIA_API_KEY=${NVIDIA_API_KEY}
       - HUGGINGFACE_API_KEY=${HUGGINGFACE_API_KEY}
       - PYDANTIC_API_KEY=${PYDANTIC_API_KEY}
+      - CEREBRAS_API_KEY=${CEREBRAS_API_KEY}
     

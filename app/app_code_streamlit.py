@@ -3,7 +3,6 @@ from contextlib import contextmanager
 
 import streamlit as st
 
-import asyncio
 from langchain_core.messages import HumanMessage
 
 
@@ -297,7 +296,7 @@ with st.sidebar:
     st.sidebar.markdown(
         """
         <div style="display: inline-block; margin-right: 10px;">
-            <a href="https://github.com/Jeferson100/Agente-investimento">
+            <a href="https://github.com/Jeferson100/Code-Agent">
                 <img src="https://img.shields.io/badge/github-100000?style=for-the-badge&logo=github">
             </a>
         </div>
@@ -352,29 +351,24 @@ if mensagem_usuario:
             # Usar contexto temporário para toda a operação
             with temp_env_vars(GROQ_API_KEY=groq_key, TAVILY_API_KEY=tavily_key, NVIDIA_API_KEY=nvidia_key, HUGGINGFACE_API_KEY=huggingface_key, PYDANTIC_API_KEY=pydantic_key):
                 # Importar dentro do contexto
-                from src.code_agent.build_graph.graph import GraphBuilder
-                from src.code_agent.states_outputs.states import StateCode
+                from code_agent.creat_react_code_agent.code_agent_react import CodeAgentReact
 
-                app_code = GraphBuilder().compile_graph()
+                code_agent = CodeAgentReact(model="qwen/qwen3-next-80b-a3b-instruct", model_provider="nvidia", checkpointer=True)
+
+                app_code = code_agent.create_agent()
     
                 config = {"configurable": {"thread_id": "1"}}
 
-                # Estado inicial para a invocação do grafo
-                inputs = {"messages": [HumanMessage(content=
-                    mensagem_usuario
-                 
-                )],
-                "feedback": "", 
-                "interactions": 0
-                    
+                input = {
+                        "messages": 
+                            [HumanMessage(role="user",
+                                        content=mensagem_usuario)],
+                        "todos": [],   
                     }
 
-                input = StateCode(**inputs)
-
-                # Executar o grafo usando asyncio.run
-                response = asyncio.run(
-                    app_code.ainvoke(input, config=config)  # type: ignore
-                )
+                response = app_code.invoke(input, config=config)  # type: ignore
+            
+                print(response)
 
                 # Extrair a resposta
                 if (
@@ -382,7 +376,7 @@ if mensagem_usuario:
                     and "messages" in response
                     and len(response["messages"]) > 1
                 ):
-                    response_text = response["messages"][1].content
+                    response_text = response["messages"][-1].content
                 else:
                     response_text = (
                         "❌ Erro: Não foi possível obter resposta do agente."

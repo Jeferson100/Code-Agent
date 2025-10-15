@@ -22,7 +22,8 @@ async def return_messages(state: StateCode) -> Dict[str, List[Any]]:
         messages=messages, code=code, feedback=feedback
     )
 
-    llm_init = init_chat_model("moonshotai/kimi-k2-instruct", model_provider="groq")
+    #llm_init = init_chat_model("moonshotai/kimi-k2-instruct", model_provider="groq")
+    llm_init = init_chat_model("mistralai/mistral-small-3.1-24b-instruct-2503", model_provider="nvidia")
 
     agent_response = create_react_agent(  # type: ignore
         llm_init, [think_response], prompt=return_messagem_prompt_format

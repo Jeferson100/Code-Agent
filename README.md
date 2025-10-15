@@ -1,32 +1,17 @@
 # 🤖 Agente de Codificação Inteligente com LangGraph
 
-||||
+|||
 |-----------|-----------|
 | **Testing**  | [![Unit Test](https://github.com/Jeferson100/Code-Agent/actions/workflows/teste.yml/badge.svg)](https://github.com/Jeferson100/Code-Agent/actions/workflows/teste.yml)|
-| **Package**  | ![Python](https://img.shields.io/badge/Python-3.12%2B-blue?style=flat&logo=python) ![LangGraph](https://img.shields.io/badge/LangGraph-0.6.7-green?style=flat) ![LangChain](https://img.shields.io/badge/LangChain-0.3.27-green?style=flat) ![Groq](https://img.shields.io/badge/Groq-API-green?style=flat) ![Tavily](https://img.shields.io/badge/Tavily-Search-yellow?style=flat) ![Pydantic AI](https://img.shields.io/badge/Pydantic%20AI-0.8.1-purple?style=flat) ![Streamlit](https://img.shields.io/badge/Streamlit-1.50.0-green?style=flat&logo=streamlit) ![Chainlit](https://img.shields.io/badge/Chainlit-2.8.1-blue?style=flat) ![FastAPI](https://img.shields.io/badge/FastAPI-0.116.2-red?style=flat&logo=fastapi) |
-| **App Streamlit** | <p align=""><a href="https://jeferson100-code-agent-appapp-code-streamlit-m6r4fj.streamlit.app/" target="_blank"><img src="https://static.streamlit.io/badges/streamlit_badge_black_white.svg" alt="Streamlit App"/></a></p> |
+| **Package**  | ![Python](https://img.shields.io/badge/Python-3.12%2B-blue?style=flat&logo=python) ![LangGraph](https://img.shields.io/badge/LangGraph-0.6.7-green?style=flat) ![LangChain](https://img.shields.io/badge/LangChain-0.3.27-green?style=flat) ![Groq](https://img.shields.io/badge/Groq-API-green?style=flat) ![Tavily](https://img.shields.io/badge/Tavily-Search-yellow?style=flat) ![Pydantic AI](https://img.shields.io/badge/Pydantic%20AI-0.8.1-purple?style=flat) ![Streamlit](https://img.shields.io/badge/Streamlit-1.50.0-green?style=flat&logo=streamlit) ![Chainlit](https://img.shields.io/badge/Chainlit-2.8.1-blue?style=flat) ![FastAPI](https://img.shields.io/badge/FastAPI-0.116.2-red?style=flat&logo=fastapi) ||
+| **App Streamlit** | <p align=""><a href="https://jeferson100-code-agent-appapp-code-streamlit-m6r4fj.streamlit.app/" target="_blank"><img src="https://static.streamlit.io/badges/streamlit_badge_black_white.svg" alt="Streamlit App"/></a></p> ||
+| | |
 
-Um agente de IA avançado para assistência em programação, construído com **LangGraph** para orquestração de fluxos de trabalho complexos, múltiplos provedores de LLM e interfaces de usuário modernas.
+Um Deep Agente de IA para assistência em programação, construído com **LangChain** para orquestração de fluxos de trabalho complexos, múltiplos provedores de LLM e interfaces de usuário modernas.
 
 ## 📋 Visão Geral
 
 Este projeto implementa um **sistema de agentes de codificação stateful** que combina múltiplos modelos de linguagem (LLMs) com ferramentas externas para criar um assistente de programação inteligente e autônomo. O sistema oferece duas abordagens principais:
-
-### 🏗️ Arquitetura LangGraph (Tradicional)
-- **Fluxo de trabalho não-linear**: O agente pode tomar decisões e iterar baseado em resultados
-- **Estados persistentes**: Mantém contexto entre interações
-- **Roteamento inteligente**: Escolhe automaticamente entre diferentes LLMs
-- **Fallback automático**: Se um modelo falha, tenta outros automaticamente
-
-### ⚡ Agente React (Nova Implementação)
-- **Execução reativa**: Responde dinamicamente a comandos do usuário
-- **Gerenciamento de tarefas**: Sistema integrado de TODOs para planejamento
-- **Ferramentas especializadas**: Busca web, geração de código, reflexão estratégica
-- **Checkpointing**: Persistência de estado entre sessões
-
- <p align="center">
-<img src="image/image.png" alt="Imagem do fluxo langgraph" width="800"/>
-</p>
 
 ## ✨ Características Principais
 
@@ -40,18 +25,12 @@ Este projeto implementa um **sistema de agentes de codificação stateful** que 
 - 📝 **Gerenciar tarefas** com sistema integrado de TODOs
 - 🤔 **Reflexão estratégica** antes de entregar respostas
 
-### 🎯 Nós Especializados (LangGraph)
-- **`node_code`**: Gera código usando LLMs especializados
-- **`node_supervisor`**: Avalia e fornece feedback sobre código gerado
-- **`node_return_message`**: Formata e entrega respostas finais
-- **`should_continue`**: Decide o próximo passo baseado no contexto
-
 ### 🛠️ Ferramentas Integradas
-- **Tavily Search**: Busca inteligente na web
-- **Sistema de TODOs**: Planejamento e rastreamento de tarefas
-- **Geração de Código**: Ferramenta especializada para criação de código
-- **Reflexão Estratégica**: Análise antes de entregar respostas
-- **Múltiplos LLMs**: Groq, HuggingFace, NVIDIA AI Endpoints, Cerebras, Pydantic AI
+- **Tavily Search**: Busca de informação na web, usando Tavily como motor de busca de conteúdo.
+- **Sistema de TODOs**: Sistema de gerenciamento de tarefas. Tem como objetivo ajudar o agente a organizar e priorizar suas tarefas e evitar alucinações.
+- **Geração de Código**: Ferramenta especializada para criação de código. Utiliza o modelo de LLM `qwen/qwen3-coder-480b-a35b-instruct` para gerar o código.
+- **Reflexão Estratégica**: Utiliza uma ferramenta para realizar reflexões estratégicas antes de entregar respostas.
+- **Múltiplos LLMs**: Groq, HuggingFace, NVIDIA AI, Cerebras, Pydantic AI
 
 ### 🎨 Múltiplas Interfaces
 - **Streamlit**: Interface web interativa e responsiva
@@ -199,62 +178,6 @@ uvicorn app.app_fastapi:app --reload --port 8000
 ```
 Acesse `http://localhost:8000/docs` para a documentação interativa.
 
-### 🖥️ Interface CLI
-
-```bash
-python app/graph_cli.py
-```
-
-### 📓 Jupyter Notebooks
-
-```bash
-jupyter lab notebooks/
-```
-
-## 🧪 Testes
-
-O projeto inclui **14 testes unitários** abrangentes:
-
-```bash
-# Executar todos os testes
-pytest tests/ -v
-
-# Executar com cobertura
-pytest tests/ --cov=src --cov-report=html
-
-# Executar testes específicos
-pytest tests/test_graph_builder.py -v
-```
-
-### Cobertura de Testes
-- ✅ GraphBuilder e compilação de grafos
-- ✅ Nós especializados (code, supervisor, return_message, should_continue)
-- ✅ Sistema de roteamento de LLMs com fallback
-- ✅ Cliente Groq e respostas estruturadas
-- ✅ Sistema de prompts e estados
-- ✅ Utilitários e ferramentas
-- ✅ Mocks completos para dependências externas
-
-## 🔧 Desenvolvimento
-
-### Estrutura de Código
-- **Modular**: Cada funcionalidade em seu próprio módulo
-- **Testável**: Cobertura completa de testes unitários
-- **Extensível**: Fácil adição de novos provedores LLM
-- **Type-safe**: Uso extensivo de type hints e Pydantic
-
-### Adicionando Novos Provedores LLM
-1. Crie um novo router em `src/code_agent/get_routem_llm/`
-2. Implemente os métodos `llm_*` e `llm_*_structured`
-3. Adicione ao `LlmRouter` em `routem_llm.py`
-4. Adicione testes em `tests/`
-
-### Adicionando Novas Ferramentas
-1. Crie a ferramenta em `src/code_agent/tools/`
-2. Use o decorator `@tool` do LangChain
-3. Adicione ao `CodeAgentReact.create_tools()`
-4. Adicione testes específicos
-
 ## 📊 Tecnologias Utilizadas
 
 ### Core Framework
@@ -281,27 +204,8 @@ pytest tests/test_graph_builder.py -v
 - **MyPy 1.15.0**: Verificação de tipos
 - **PyRefly 0.34.0**: Análise de código
 
-## 🤝 Contribuição
-
-1. Fork o projeto
-2. Crie uma branch para sua feature (`git checkout -b feature/AmazingFeature`)
-3. Commit suas mudanças (`git commit -m 'Add some AmazingFeature'`)
-4. Push para a branch (`git push origin feature/AmazingFeature`)
-5. Abra um Pull Request
 
 ## 📄 Licença
 
 Este projeto está licenciado sob a [Licença MIT](LICENSE).
 
-## 🙏 Agradecimentos
-
-- [LangGraph](https://github.com/langchain-ai/langgraph) pela orquestração de workflows
-- [LangChain](https://github.com/langchain-ai/langchain) pelo framework de LLMs
-- [Groq](https://groq.com/) pelos modelos de linguagem rápidos
-- [Tavily](https://tavily.com/) pela busca inteligente na web
-- [Streamlit](https://streamlit.io/) pela interface web
-- [Chainlit](https://chainlit.io/) pela interface de chat
-
----
-
-**Desenvolvido com ❤️ para a comunidade de desenvolvedores**

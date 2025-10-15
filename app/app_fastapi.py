@@ -1,4 +1,3 @@
-import sys
 from dotenv import load_dotenv
 
 
@@ -6,8 +5,7 @@ from fastapi import FastAPI
 from fastapi.responses import JSONResponse
 
 from langchain_core.messages import HumanMessage
-from src.code_agent.build_graph.graph import GraphBuilder
-from src.code_agent.states_outputs.states import StateCode
+from src.code_agent.creat_react_code_agent.code_agent_react import CodeAgentReact
 
 load_dotenv()
 
@@ -39,24 +37,24 @@ async def chatbot(message: str):
     """
     Endpoint do chatbot que recebe uma mensagem e retorna a resposta do LangGraph.
     """
-    app_code = GraphBuilder().compile_graph()
+    
+    code_agent = CodeAgentReact(model="qwen/qwen3-next-80b-a3b-instruct", model_provider="nvidia", checkpointer=True)
+    
+    app_code = code_agent.create_agent()
 
     # Configuração para a thread específica (pode ser dinâmica se necessário)
     config = {"configurable": {"thread_id": "1"}}
 
     # Estado inicial para a invocação do grafo
     inputs = {"messages": [HumanMessage(content=message)],
-                "feedback": "", 
-                "interactions": 0
                     }
-    input = StateCode(**inputs)
+    
     
     response = await app_code.ainvoke(
-        input,
+        inputs,
         config=config,
     )
 
-    # FastAPI lida automaticamente com a serialização de dicionários/listas para JSON
     return response
 
 

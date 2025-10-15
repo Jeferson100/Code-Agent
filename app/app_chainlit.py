@@ -4,17 +4,18 @@ import sys
 import chainlit as cl
 from dotenv import load_dotenv
 from langchain_core.messages import HumanMessage
-from src.code_agent.build_graph.graph import GraphBuilder
-from src.code_agent.states_outputs.states import StateCode
+from code_agent.creat_react_code_agent.code_agent_react import CodeAgentReact
 
 load_dotenv()
 
-app_code = GraphBuilder().compile_graph()
+app = CodeAgentReact(model="qwen/qwen3-next-80b-a3b-instruct", model_provider="nvidia", checkpointer=True)
 
-config = {"configurable": {"thread_id": "1"}}
+app_code = app.create_agent()
+
+config = {"configurable": {"thread_id": "1"}, "recursion_limit" : 10}
 
 @cl.on_message
-async def main(message: cl.Message):
+def main(message: cl.Message):
     
     # Certificar-se de que o conteúdo é uma string
     if isinstance(message.content, str):
@@ -23,16 +24,10 @@ async def main(message: cl.Message):
         # Converter para string se necessário
         human_message = HumanMessage(content=str(message.content))
         
-    inputs = {"messages": [human_message],
-            "feedback": "", 
-            "interactions": 0
-                    
-                    }
-
-    input = StateCode(**inputs)
+    inputs = {"messages": [human_message],}
     
-    response = await app_code.ainvoke(
-        input,
+    response = app_code.invoke(
+        inputs,
         config=config,
         )
 
@@ -41,6 +36,6 @@ async def main(message: cl.Message):
         and isinstance(response["messages"], list)
         and len(response["messages"]) > 0
     ):
-        await cl.Message(content=response["messages"][-1].content).send()
+        cl.Message(content=response["messages"][-1].content).send()
     else:
-        await cl.Message(content="Erro: Resposta inválida recebida").send()
+        cl.Message(content="Erro: Resposta inválida recebida").send()
