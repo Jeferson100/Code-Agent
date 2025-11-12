@@ -11,13 +11,17 @@ class SupervisorResponse(BaseModel):
 
 
 class CodeOutput(BaseModel):
-    """Schema for code solutions to questions about LCEL."""
+    """Schema for code generation output."""
 
-    prefix: str = Field(description="Description of the problem and approach")
-    imports: str = Field(
-        description="Code block import statements, if there are imports, leave it empty"
+    code: str = Field(
+        description="The generated code, including any imports and explanation"
     )
-    code: str = Field(description="Code block not including import statements")
+    imports: str = Field(
+        description="Reserved for backwards compatibility, but not used", default=""
+    )
+    prefix: str = Field(
+        description="Reserved for backwards compatibility, but not used", default=""
+    )
 
 
 class SearchResponse(BaseModel):

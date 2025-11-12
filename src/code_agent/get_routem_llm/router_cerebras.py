@@ -2,7 +2,7 @@ import logging
 import os
 from typing import Optional
 
-from cerebras.cloud.sdk import AsyncCerebras
+from cerebras.cloud.sdk import AsyncCerebras  # pylint: disable=E0401,E0611
 from dotenv import load_dotenv
 from pydantic import BaseModel
 

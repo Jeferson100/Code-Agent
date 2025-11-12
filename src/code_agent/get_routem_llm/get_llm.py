@@ -42,13 +42,13 @@ class GetLlmResponse:
                 "structured_output precisa estar definido para usar essa função."
             )
 
-        response = await client.chat.completions.create(
-            model=self.model_llm,
+        response = await client.chat.completions.create(  # type: ignore
+            model=self.model_llm,  # type: ignore
             messages=[
                 {
                     "role": "user",
                     "content": self.messages,
-                },  # Corrigido: usar self.messages
+                },
             ],
             response_format={
                 "type": "json_schema",
@@ -59,13 +59,14 @@ class GetLlmResponse:
             },
         )
         content = response.choices[0].message.content or "{}"
+
         return json.loads(content)
 
     async def llm_groq(self) -> str:
         """
         Chama modelo Groq sem saída estruturada
         """
-        response = await client.chat.completions.create(
+        response = await client.chat.completions.create(  # type: ignore
             model=self.model_llm,
             messages=[
                 {

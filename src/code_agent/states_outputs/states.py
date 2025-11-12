@@ -1,5 +1,5 @@
 import operator
-from typing import Annotated, List, Literal, NotRequired, TypedDict
+from typing import Annotated, List, Literal, NotRequired, Optional, TypedDict
 
 from langchain_core.messages import BaseMessage
 
@@ -27,10 +27,10 @@ def file_reducer(left, right):
 
 class StateCode(TypedDict):
     messages: Annotated[List[BaseMessage], operator.add]
-    code: str
-    feedback: str
-    valid: Literal[True, False]
-    interactions: int
+    code: NotRequired[Optional[str]]
+    feedback: NotRequired[Optional[str]]
+    valid: NotRequired[Optional[bool]]
+    interactions: NotRequired[Optional[int]]
 
 
 class Todo(TypedDict):
@@ -56,3 +56,4 @@ class DeepAgentState(StateCode):
     todos: NotRequired[list[Todo]]
     files: Annotated[NotRequired[dict[str, str]], file_reducer]
     remaining_steps: NotRequired[int]
+    code_interactions: NotRequired[int]

@@ -1,6 +1,7 @@
 from typing import Any, Dict, List
 
 from langchain.chat_models import init_chat_model
+from langchain_core.messages import AIMessage
 
 from ..get_routem_llm.routem_llm import LlmRouter
 from ..prompts.prompts import PROMPT_CODE
@@ -12,7 +13,7 @@ llm_code = init_chat_model(
 )
 
 
-async def node_code(state: StateCode) -> Dict[str, str]:
+async def node_code(state: StateCode) -> Dict[str, Any]:
     messages: List[Any] = state.get("messages", [])
 
     if messages:
@@ -41,4 +42,9 @@ async def node_code(state: StateCode) -> Dict[str, str]:
     else:
         code, imports, prefix = "", "", ""
 
-    return {"code": code, "imports": imports, "prefix": prefix}
+    return {
+        "code": code,
+        "imports": imports,
+        "prefix": prefix,
+        "messages": [AIMessage(content=response.content)],
+    }

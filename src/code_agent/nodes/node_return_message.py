@@ -1,7 +1,7 @@
 from typing import Any, Dict, List
 
 from langchain.chat_models import init_chat_model
-from langgraph.prebuilt import create_react_agent
+from langgraph.prebuilt import create_react_agent  # pylint: disable=E0401,E0611
 
 from ..prompts.prompts import RETURN_MESSAGES_PROMPT
 from ..states_outputs.states import StateCode
@@ -22,8 +22,10 @@ async def return_messages(state: StateCode) -> Dict[str, List[Any]]:
         messages=messages, code=code, feedback=feedback
     )
 
-    #llm_init = init_chat_model("moonshotai/kimi-k2-instruct", model_provider="groq")
-    llm_init = init_chat_model("mistralai/mistral-small-3.1-24b-instruct-2503", model_provider="nvidia")
+    # llm_init = init_chat_model("moonshotai/kimi-k2-instruct", model_provider="groq")
+    llm_init = init_chat_model(
+        "mistralai/mistral-small-3.1-24b-instruct-2503", model_provider="nvidia"
+    )
 
     agent_response = create_react_agent(  # type: ignore
         llm_init, [think_response], prompt=return_messagem_prompt_format

@@ -4,7 +4,7 @@
 |-----------|-----------|
 | **Testing**  | [![Unit Test](https://github.com/Jeferson100/Code-Agent/actions/workflows/teste.yml/badge.svg)](https://github.com/Jeferson100/Code-Agent/actions/workflows/teste.yml)|
 | **Package**  | ![Python](https://img.shields.io/badge/Python-3.12%2B-blue?style=flat&logo=python) ![LangGraph](https://img.shields.io/badge/LangGraph-0.6.7-green?style=flat) ![LangChain](https://img.shields.io/badge/LangChain-0.3.27-green?style=flat) ![Groq](https://img.shields.io/badge/Groq-API-green?style=flat) ![Tavily](https://img.shields.io/badge/Tavily-Search-yellow?style=flat) ![Pydantic AI](https://img.shields.io/badge/Pydantic%20AI-0.8.1-purple?style=flat) ![Streamlit](https://img.shields.io/badge/Streamlit-1.50.0-green?style=flat&logo=streamlit) ![Chainlit](https://img.shields.io/badge/Chainlit-2.8.1-blue?style=flat) ![FastAPI](https://img.shields.io/badge/FastAPI-0.116.2-red?style=flat&logo=fastapi) ||
-| **App Streamlit** | <p align=""><a href="https://jeferson100-code-agent-appapp-code-streamlit-m6r4fj.streamlit.app/" target="_blank"><img src="https://static.streamlit.io/badges/streamlit_badge_black_white.svg" alt="Streamlit App"/></a></p> ||
+| **App Streamlit** | <p align=""><a href="https://code-agent-2.streamlit.app/" target="_blank"><img src="https://static.streamlit.io/badges/streamlit_badge_black_white.svg" alt="Streamlit App"/></a></p> ||
 | | |
 
 Um Deep Agente de IA para assistência em programação, construído com **LangChain** para orquestração de fluxos de trabalho complexos, múltiplos provedores de LLM e interfaces de usuário modernas.
@@ -156,7 +156,8 @@ docker-compose up
 
 ### 🚀 Interface Streamlit
 
-**Online**: [Aplicação Streamlit](https://jeferson100-code-agent-appapp-code-streamlit-m6r4fj.streamlit.app/)
+<p align=""><a href="https://code-agent-2.streamlit.app/" target="_blank"><img src="https://static.streamlit.io/badges/streamlit_badge_black_white.svg" alt="Streamlit App"/></a></p> 
+
 
 **Local**:
 ```bash
@@ -208,4 +209,10 @@ Acesse `http://localhost:8000/docs` para a documentação interativa.
 ## 📄 Licença
 
 Este projeto está licenciado sob a [Licença MIT](LICENSE).
+
+## 📞 Contatos
+
+| GitHub | LinkedIn |
+|--------|---------|
+| [![GitHub](https://img.shields.io/badge/github-100000?style=for-the-badge&logo=github)](https://github.com/Jeferson100) | [![LinkedIn](https://img.shields.io/badge/linkedin-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/jefersonsehnem/) |
 

@@ -44,7 +44,7 @@ class RouterGroq:
             raise ValueError(
                 "structured_output precisa estar definido para usar essa função."
             )
-        response = await self.client_groq.chat.completions.create(
+        response = await self.client_groq.chat.completions.create(  # type: ignore
             model=self.model_llm,
             messages=[
                 {"role": "user", "content": self.messages},
@@ -64,7 +64,7 @@ class RouterGroq:
         """
         Chama modelo Groq sem saída estruturada
         """
-        response = await self.client_groq.chat.completions.create(
+        response = await self.client_groq.chat.completions.create(  # type: ignore
             model=self.model_llm,
             messages=[
                 {"role": "user", "content": self.messages},

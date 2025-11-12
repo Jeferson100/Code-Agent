@@ -5,7 +5,7 @@ from typing import Any, List, Optional
 from langchain.chat_models import init_chat_model
 from langgraph.checkpoint.base import BaseCheckpointSaver
 from langgraph.checkpoint.memory import MemorySaver
-from langgraph.prebuilt import create_react_agent
+from langgraph.prebuilt import create_react_agent  # pylint: disable=E0401,E0611
 
 from ..prompts.prompts import PROMP_AGENT_CODE, TODO_USAGE_INSTRUCTIONS
 from ..states_outputs.states import DeepAgentState
@@ -130,9 +130,11 @@ class CodeAgentReact:
         current_date = get_today_str()
 
         prompt = (
-            f"{TODO_USAGE_INSTRUCTIONS}\n\n"
-            f"{separator}\n\n"
+            f"{TODO_USAGE_INSTRUCTIONS}\n"
+            f"{separator}\n"
             f"{PROMP_AGENT_CODE.format(date=current_date)}"
+            # f"{separator}\n"
+            # f"{SUBAGENT_USAGE_INSTRUCTIONS.format(max_concurrent_research_units=max_concurrent_research_units, max_researcher_iterations=max_researcher_iterations)}\n"
         )
 
         return prompt

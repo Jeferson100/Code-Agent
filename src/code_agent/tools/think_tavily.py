@@ -1,3 +1,6 @@
+import os
+from typing import Any
+
 from dotenv import load_dotenv
 from langchain_core.tools import tool
 from tavily import TavilyClient
@@ -9,8 +12,8 @@ tavily_client = TavilyClient()
 
 @tool(parse_docstring=True)
 def web_search(
-    query: str,
-):
+    query: str, max_results: int = 5, include_images: bool = False
+) -> list[Any | dict[str, str]]:
     """Search the web for information on a specific topic.
 
     This tool performs web searches and returns relevant results
@@ -20,6 +23,8 @@ def web_search(
     Args:
         query: The search query string. Be specific and clear about what
                information you're looking for.
+        max_results: The maximum number of search results to return.
+        include_images: Whether to include images in the search results.
 
     Returns:
         Search results from search engine.
@@ -27,8 +32,37 @@ def web_search(
     Example:
         web_search("machine learning applications in healthcare")
     """
-    print(f"🔍 Searching the web for: {query}")
-    return tavily_client.search(query)
+    params = {}
+    api_key: str | None = os.getenv("TAVILY_API_KEY")
+    if not api_key:
+        raise ValueError("TAVILY_API_KEY not found in environment variables.")
+    params["api_key"] = api_key
+
+    client = TavilyClient(api_key=api_key)
+
+    try:
+        response = client.search(
+            query=query, max_results=max_results, include_images=include_images
+        )
+
+        results = []
+        for r in response.get("results", []):
+            results.append(
+                {
+                    "title": r.get("title", ""),
+                    "content": r.get("content", ""),
+                    "url": r.get("url", ""),
+                }
+            )
+
+        if include_images:
+            for img_url in response.get("images", []):
+                results.append({"image_url": img_url})
+
+        return results
+
+    except Exception as e:  # pylint: disable=broad-except
+        return [f"An Error occurred: {e} with the Tavily API. Please try again later."]
 
 
 @tool(parse_docstring=True)

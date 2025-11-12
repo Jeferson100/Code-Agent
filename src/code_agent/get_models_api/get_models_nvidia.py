@@ -1,6 +1,6 @@
 from typing import Any
 
-from langchain_nvidia_ai_endpoints import ChatNVIDIA
+from langchain_nvidia_ai_endpoints import ChatNVIDIA  # pylint: disable=E0401,E0611
 
 
 class GetModelsNvidia:

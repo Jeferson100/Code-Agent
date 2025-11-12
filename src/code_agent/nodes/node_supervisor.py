@@ -19,7 +19,7 @@ async def node_supervisor(state: StateCode) -> Dict[str, Any]:
     else:
         interactions = 1
 
-    code = state["code"]
+    code = state.get("code", "")
 
     prompt_supervisor_format = SUPERVISOR_CODE.format(messages=messages, code=code)
 

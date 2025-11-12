@@ -35,7 +35,7 @@ class GetModelGroqStructuredResponse:
         model_groq_strured = []
         for model in models_vailable_groq:
             try:
-                _ = client_groq.chat.completions.create(
+                response = client_groq.chat.completions.create(  # type: ignore
                     model=model,
                     messages=[
                         {
@@ -55,6 +55,7 @@ class GetModelGroqStructuredResponse:
                         },
                     },
                 )
+                print(response)
                 model_groq_strured.append(model)  # type:ignore
             except Exception as _:  # pylint: disable=broad-exception-caught
                 pass
@@ -66,7 +67,7 @@ class GetModelGroqStructuredResponse:
 
         async def check_model(model: str) -> str | None:
             try:
-                _ = await client_groq.chat.completions.create(
+                _ = await client_groq.chat.completions.create(  # type: ignore
                     model=model,
                     messages=[
                         {

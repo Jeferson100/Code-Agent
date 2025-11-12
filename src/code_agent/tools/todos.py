@@ -2,7 +2,7 @@ from typing import Annotated
 
 from langchain_core.messages import ToolMessage
 from langchain_core.tools import InjectedToolCallId, tool
-from langgraph.prebuilt import InjectedState
+from langgraph.prebuilt import InjectedState  # pylint: disable=E0401,E0611
 from langgraph.types import Command
 
 from ..prompts.prompts import WRITE_TODOS_DESCRIPTION

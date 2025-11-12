@@ -2,7 +2,8 @@ import asyncio
 import logging
 from typing import Any, Literal
 
-from cerebras.cloud.sdk import AsyncCerebras, Cerebras
+from cerebras.cloud.sdk import AsyncCerebras  # pylint: disable=E0401,E0611
+from cerebras.cloud.sdk import Cerebras  # pylint: disable=E0401,E0611
 from dotenv import load_dotenv
 from pydantic import BaseModel, Field
 
