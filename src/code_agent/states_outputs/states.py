@@ -1,5 +1,10 @@
 import operator
-from typing import Annotated, List, Literal, NotRequired, Optional, TypedDict
+from typing import Annotated, List, Literal, NotRequired, Optional
+
+try:
+    from typing_extensions import TypedDict
+except ImportError:
+    from typing import TypedDict  # type: ignore
 
 from langchain_core.messages import BaseMessage
 

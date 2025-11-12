@@ -38,7 +38,10 @@ class TestCodeAgentReact:
 
     def test_init_with_checkpointer_instance(self, monkeypatch: Any):
         """Testa que __init__ usa instância de checkpointer quando fornecida."""
-        mock_checkpointer = MagicMock()
+        from langgraph.checkpoint.base import BaseCheckpointSaver
+        
+        # Criar um mock que seja uma instância de BaseCheckpointSaver
+        mock_checkpointer = MagicMock(spec=BaseCheckpointSaver)
 
         with patch("src.code_agent.creat_react_code_agent.code_agent_react.init_chat_model"):
             agent = CodeAgentReact(

@@ -99,7 +99,13 @@ def _create_react_agent(_llm, _tools, prompt=None):  # noqa: ARG002
         async def ainvoke(self, _payload):  # noqa: ARG002
             return {"messages": [types.SimpleNamespace(content="ok")]}
     return _Agent()
+
+class _InjectedState:
+    """Stub para InjectedState usado em anotações de tipo."""
+    pass
+
 setattr(lg_prebuilt, "create_react_agent", _create_react_agent)
+setattr(lg_prebuilt, "InjectedState", _InjectedState)
 
 
 # langchain.chat_models

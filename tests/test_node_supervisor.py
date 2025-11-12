@@ -1,5 +1,4 @@
 """Testes para o módulo node_supervisor."""
-import asyncio
 from typing import Any
 
 import pytest

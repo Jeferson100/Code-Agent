@@ -54,3 +54,4 @@ class TestShouldContinue:
         """Testa que should_continue trata ausência de valid como False."""
         state = cast(StateCode, {"interactions": 1, "messages": []})
         assert should_continue(state) == "supervisor"
+

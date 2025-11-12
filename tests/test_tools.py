@@ -1,10 +1,8 @@
 """Testes para os módulos de tools."""
-import os
 from typing import Any
-from unittest.mock import MagicMock, patch
 
 import pytest
-from langchain_core.messages import HumanMessage, ToolMessage
+from langchain_core.messages import HumanMessage
 from langgraph.types import Command
 
 from src.code_agent.states_outputs.states import DeepAgentState, Todo
@@ -17,6 +15,9 @@ class TestThinkTavily:
     def test_web_search_returns_results(self, monkeypatch: Any):
         """Testa que web_search retorna resultados."""
         class DummyTavilyClient:
+            def __init__(self, api_key: str | None = None):
+                pass
+
             def search(self, query: str, max_results: int = 5, include_images: bool = False):
                 return {
                     "results": [
@@ -49,6 +50,9 @@ class TestThinkTavily:
     def test_web_search_handles_api_error(self, monkeypatch: Any):
         """Testa que web_search lida com erro da API."""
         class DummyTavilyClient:
+            def __init__(self, api_key: str | None = None):
+                pass
+
             def search(self, query: str, max_results: int = 5, include_images: bool = False):
                 raise Exception("API Error")
 
@@ -94,8 +98,8 @@ class TestTodos:
         })
 
         assert isinstance(result, Command)
-        assert "update" in result.__dict__
-        update = result.__dict__["update"]
+        assert hasattr(result, "update")
+        update = result.update
         assert "todos" in update
         assert update["todos"] == todos_list
         assert "messages" in update
@@ -112,12 +116,11 @@ class TestTodos:
             "todos": todos_list,
         }
 
-        # Mock InjectedState
-        with patch("src.code_agent.tools.todos.InjectedState", return_value=state):
-            result = todos.read_todos.invoke({
-                "state": state,
-                "tool_call_id": "test_id"
-            })
+        # Mock InjectedState para retornar o state
+        def mock_read_todos(state_param, tool_call_id):
+            return todos.read_todos.func(state_param, tool_call_id)
+
+        result = mock_read_todos(state, "test_id")
 
         assert isinstance(result, str)
         assert "Task 1" in result
@@ -132,11 +135,10 @@ class TestTodos:
             "todos": [],
         }
 
-        with patch("src.code_agent.tools.todos.InjectedState", return_value=state):
-            result = todos.read_todos.invoke({
-                "state": state,
-                "tool_call_id": "test_id"
-            })
+        def mock_read_todos(state_param, tool_call_id):
+            return todos.read_todos.func(state_param, tool_call_id)
+
+        result = mock_read_todos(state, "test_id")
 
         assert isinstance(result, str)
         assert "No todos" in result or "no todos" in result.lower()
@@ -163,15 +165,15 @@ class TestToolWriteCode:
             "code_interactions": 0,
         }
 
-        result = tool_write_code.write_code.invoke({
-            "query": "write hello world",
-            "state": state,
-            "tool_call_id": "test_id"
-        })
+        # Mock InjectedState para retornar o state
+        def mock_write_code(query_param, state_param, tool_call_id):
+            return tool_write_code.write_code.func(query_param, state_param, tool_call_id)
+
+        result = mock_write_code("write hello world", state, "test_id")
 
         assert isinstance(result, Command)
-        assert "update" in result.__dict__
-        update = result.__dict__["update"]
+        assert hasattr(result, "update")
+        update = result.update
         assert "code_interactions" in update
         assert update["code_interactions"] == 1
         assert "messages" in update
@@ -184,14 +186,13 @@ class TestToolWriteCode:
             "code_interactions": 3,
         }
 
-        result = tool_write_code.write_code.invoke({
-            "query": "write code",
-            "state": state,
-            "tool_call_id": "test_id"
-        })
+        def mock_write_code(query_param, state_param, tool_call_id):
+            return tool_write_code.write_code.func(query_param, state_param, tool_call_id)
+
+        result = mock_write_code("write code", state, "test_id")
 
         assert isinstance(result, Command)
-        update = result.__dict__["update"]
+        update = result.update
         assert "code_interactions" in update
         assert update["code_interactions"] == 3
         assert "messages" in update
@@ -212,11 +213,10 @@ class TestToolWriteCode:
             "code_interactions": 0,
         }
 
-        result = tool_write_code.write_code.invoke({
-            "query": "write code",
-            "state": state,
-            "tool_call_id": "test_id"
-        })
+        def mock_write_code(query_param, state_param, tool_call_id):
+            return tool_write_code.write_code.func(query_param, state_param, tool_call_id)
+
+        result = mock_write_code("write code", state, "test_id")
 
         assert isinstance(result, str)
         assert "Error" in result or "error" in result.lower()
