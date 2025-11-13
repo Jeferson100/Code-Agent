@@ -28,7 +28,7 @@ jobs:
           make uv_install
       - name: Instalar bibliotecas devs
         run: |
-          uv sync --extra dev
+          uv pip install .[dev]
       - name: Verificar formatação dos arquivos
         run: |
           make format

@@ -30,15 +30,15 @@ def file_reducer(left, right):
         return {**left, **right}
 
 
-class StateCode(TypedDict):
-    messages: Annotated[List[BaseMessage], operator.add]
-    code: NotRequired[Optional[str]]
-    feedback: NotRequired[Optional[str]]
-    valid: NotRequired[Optional[bool]]
-    interactions: NotRequired[Optional[int]]
+class StateCode(TypedDict):  # type: ignore
+    messages: Annotated[List[BaseMessage], operator.add]  # type: ignore
+    code: NotRequired[Optional[str]]  # type: ignore
+    feedback: NotRequired[Optional[str]]  # type: ignore
+    valid: NotRequired[Optional[bool]]  # type: ignore
+    interactions: NotRequired[Optional[int]]  # type: ignore
 
 
-class Todo(TypedDict):
+class Todo(TypedDict):  # type: ignore
     """A structured task item for tracking progress through complex workflows.
 
     Attributes:
@@ -58,7 +58,7 @@ class DeepAgentState(StateCode):
     - files: Virtual file system stored as dict mapping filenames to content
     """
 
-    todos: NotRequired[list[Todo]]
-    files: Annotated[NotRequired[dict[str, str]], file_reducer]
-    remaining_steps: NotRequired[int]
-    code_interactions: NotRequired[int]
+    todos: NotRequired[list[Todo]]  # type: ignore
+    files: Annotated[NotRequired[dict[str, str]], file_reducer]  # type: ignore
+    remaining_steps: NotRequired[int]  # type: ignore
+    code_interactions: NotRequired[int]  # type: ignore
