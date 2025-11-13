@@ -4,7 +4,7 @@
 |-----------|-----------|
 | **Testing**  | [![Unit Test](https://github.com/Jeferson100/Code-Agent/actions/workflows/teste.yml/badge.svg)](https://github.com/Jeferson100/Code-Agent/actions/workflows/teste.yml)|
 | **Package**  | ![Python](https://img.shields.io/badge/Python-3.12%2B-blue?style=flat&logo=python) ![LangGraph](https://img.shields.io/badge/LangGraph-0.6.7-green?style=flat) ![LangChain](https://img.shields.io/badge/LangChain-0.3.27-green?style=flat) ![Groq](https://img.shields.io/badge/Groq-API-green?style=flat) ![Tavily](https://img.shields.io/badge/Tavily-Search-yellow?style=flat) ![Pydantic AI](https://img.shields.io/badge/Pydantic%20AI-0.8.1-purple?style=flat) ![Streamlit](https://img.shields.io/badge/Streamlit-1.50.0-green?style=flat&logo=streamlit) ![Chainlit](https://img.shields.io/badge/Chainlit-2.8.1-blue?style=flat) ![FastAPI](https://img.shields.io/badge/FastAPI-0.116.2-red?style=flat&logo=fastapi) ||
-| **App Streamlit** | <p align=""><a href="https://code-agent-2.streamlit.app/" target="_blank"><img src="https://static.streamlit.io/badges/streamlit_badge_black_white.svg" alt="Streamlit App"/></a></p> ||
+| **App Streamlit** | <p align=""><a href="https://react-code-agent.streamlit.app/" target="_blank"><img src="https://static.streamlit.io/badges/streamlit_badge_black_white.svg" alt="Streamlit App"/></a></p> ||
 | | |
 
 Um Deep Agente de IA para assistência em programação, construído com **LangChain** e **LangGraph** para orquestração de fluxos de trabalho, múltiplos provedores de LLM.
@@ -347,7 +347,7 @@ docker-compose up
 
 ### 🚀 Interface Streamlit
 
-<p align=""><a href="https://code-agent-2.streamlit.app/" target="_blank"><img src="https://static.streamlit.io/badges/streamlit_badge_black_white.svg" alt="Streamlit App"/></a></p> 
+<p align=""><a href="https://react-code-agent.streamlit.app/" target="_blank"><img src="https://static.streamlit.io/badges/streamlit_badge_black_white.svg" alt="Streamlit App"/></a></p> 
 
 
 **Local**:

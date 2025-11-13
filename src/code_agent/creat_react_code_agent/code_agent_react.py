@@ -5,7 +5,9 @@ from typing import Any, List, Optional
 from langchain.chat_models import init_chat_model
 from langgraph.checkpoint.base import BaseCheckpointSaver
 from langgraph.checkpoint.memory import MemorySaver
-from langgraph.prebuilt import create_react_agent  # pylint: disable=E0401,E0611 #type:ignore; pylint: disable=E0401,E0611 #type:ignore
+
+# pylint: disable=E0401,E0611 #type:ignore;
+from langgraph.prebuilt import create_react_agent  # pylint: disable=E0401,E0611 #type:ignore;
 
 from ..prompts.prompts import PROMP_AGENT_CODE, TODO_USAGE_INSTRUCTIONS
 from ..states_outputs.states import DeepAgentState
