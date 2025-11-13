@@ -50,3 +50,4 @@ jobs:
             PYDANTIC_API_KEY : ${{ secrets.PYDANTIC_API_KEY }}
             NIVIDIA_API_KEY : ${{ secrets.NVIDIA_API_KEY }}
             HUGGINGFACE_API_KEY : ${{ secrets.HUGGINGFACE_API_KEY }}
+            CEREBRAS_API_KEY : ${{ secrets.CEREBRAS_API_KEY }}

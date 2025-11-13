@@ -7,11 +7,15 @@
 | **App Streamlit** | <p align=""><a href="https://code-agent-2.streamlit.app/" target="_blank"><img src="https://static.streamlit.io/badges/streamlit_badge_black_white.svg" alt="Streamlit App"/></a></p> ||
 | | |
 
-Um Deep Agente de IA para assistência em programação, construído com **LangChain** para orquestração de fluxos de trabalho complexos, múltiplos provedores de LLM e interfaces de usuário modernas.
+Um Deep Agente de IA para assistência em programação, construído com **LangChain** e **LangGraph** para orquestração de fluxos de trabalho, múltiplos provedores de LLM.
 
 ## 📋 Visão Geral
 
 Este projeto implementa um **sistema de agentes de codificação stateful** que combina múltiplos modelos de linguagem (LLMs) com ferramentas externas para criar um assistente de programação inteligente e autônomo. O sistema oferece duas abordagens principais:
+
+<p align="center">
+<img src="image/code_agent_react_flow.png" alt="Imagem do fluxo langgraph" width="800"/>
+</p>
 
 ## ✨ Características Principais
 

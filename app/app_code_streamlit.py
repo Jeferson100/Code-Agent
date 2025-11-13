@@ -90,6 +90,15 @@ if (
 else:
     st.warning("Por favor, defina a chave API do Pydantic.")
 
+if (
+    "cerebras_api" in st.session_state
+    and st.session_state.cerebras_api
+    or os.getenv("CEREBRAS_API_KEY")
+):
+    pass
+else:
+    st.warning("Por favor, defina a chave API do Cerebras.")
+
 
 if "chat_history" not in st.session_state:
     st.session_state.chat_history = []
@@ -142,7 +151,7 @@ with st.sidebar:
             unsafe_allow_html=True,
         )
     
-    col1, col2 = st.sidebar.columns(2)
+    col1, col2, col3 = st.sidebar.columns(3)
     
     with col1:
             st.markdown(
@@ -155,6 +164,14 @@ with st.sidebar:
         st.markdown(
             """
         [![Pydantic](https://img.shields.io/badge/Create%20Pydantic%20API%20Key-blue?style=flat&logo=groq)](https://pydantic-docs.helpmanual.io/usage/settings/)
+        """,
+            unsafe_allow_html=True,
+        )
+
+    with col3:
+        st.markdown(
+            """
+        [![Cerebras](https://img.shields.io/badge/Create%20Cerebras%20API%20Key-blue?style=flat&logo=groq)](https://cloud.cerebras.ai/platform/org_hth54vcwhn63ck4n6enndhn9/apikeys)
         """,
             unsafe_allow_html=True,
         )
@@ -173,6 +190,9 @@ with st.sidebar:
         
     if "pydantic_api" not in st.session_state:
         st.session_state["pydantic_api"] = None
+        
+    if "cerebras_api" not in st.session_state:
+        st.session_state["cerebras_api"] = None
 
     try:
         if os.getenv("GROQ_API_KEY") is not None:
@@ -253,6 +273,22 @@ with st.sidebar:
             if pydantic_api:
                 st.session_state.pydantic_api = pydantic_api
                 st.success("API key Pydantic configurada com sucesso!", icon="✅")
+        
+        if os.getenv("CEREBRAS_API_KEY") is not None:
+            cerebras_api = os.getenv("CEREBRAS_API_KEY")
+            st.success("API key Cerebras ja existe!", icon="✅")
+
+        else:
+            # Pede a chave apenas se ainda não estiver salva
+            cerebras_api = st.text_input(
+                "Enter Cerebras API token:",
+                value=st.session_state.cerebras_api,
+                type="password",
+            )
+
+            if cerebras_api:
+                st.session_state.cerebras_api = cerebras_api
+                st.success("API key Cerebras configurada com sucesso!", icon="✅")
 
     except ValueError as e:
         st.error(f"Erro ao utilizar a API: {e}")
@@ -324,8 +360,10 @@ if mensagem_usuario:
     huggingface_key = st.session_state.get("huggingface_api")
     
     pydantic_key = st.session_state.get("pydantic_api")
+    
+    cerebras_key = st.session_state.get("cerebras_api")
 
-    if not groq_key or not tavily_key or not nvidia_key or not huggingface_key or not pydantic_key:
+    if not groq_key or not tavily_key or not nvidia_key or not huggingface_key or not pydantic_key or not cerebras_key:
         # Mostrar erro na interface do usuário
         error_msg = "❌ **Erro: APIs não configuradas**\n\n"
         if not groq_key:
@@ -338,6 +376,8 @@ if mensagem_usuario:
             error_msg += "- Huggingface API Key não encontrada\n"
         if not pydantic_key:
             error_msg += "- Pydantic API Key não encontrada\n"
+        if not cerebras_key:
+            error_msg += "- Cerebras API Key não encontrada\n"
         error_msg += "\n👆 Configure as chaves na barra lateral para continuar."
 
         with st.chat_message("assistant"):
@@ -349,7 +389,7 @@ if mensagem_usuario:
     try:
         with st.spinner("🤖 Processando sua solicitação..."):
             # Usar contexto temporário para toda a operação
-            with temp_env_vars(GROQ_API_KEY=groq_key, TAVILY_API_KEY=tavily_key, NVIDIA_API_KEY=nvidia_key, HUGGINGFACE_API_KEY=huggingface_key, PYDANTIC_API_KEY=pydantic_key):
+            with temp_env_vars(GROQ_API_KEY=groq_key, TAVILY_API_KEY=tavily_key, NVIDIA_API_KEY=nvidia_key, HUGGINGFACE_API_KEY=huggingface_key, PYDANTIC_API_KEY=pydantic_key, CEREBRAS_API_KEY=cerebras_key):
                 # Importar dentro do contexto
                 from code_agent.creat_react_code_agent.code_agent_react import CodeAgentReact
 
